@@ -34,6 +34,3 @@ npm start
 - Express
 - Passport (Login/Signup/Protected routes)
 - 100% tested
-
-# Foodify
-# Foodify
