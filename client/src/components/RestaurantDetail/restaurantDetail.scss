@@ -1,0 +1,120 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+
+.detail-container{
+    width: 100%;
+    min-height: calc(100vh - 8rem);
+    position: relative;
+    &__img{
+        width: 100vw;
+        height: 40vh;     
+        .img{
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+            position: relative;
+        }
+        .fav{
+            display: unset;
+            top: 3%;
+            right: 3%;
+            position: absolute;
+            z-index: 1;
+            background-color: $background-color-secundary;
+            border-radius: 50%;
+            width: 3.5rem;
+            height: 3.5rem;
+            .heart{
+                display: flex;
+                margin: 0 auto;
+                width: 2.1rem;
+                height: 2.1rem;
+            }
+        }
+    }
+    .restaurant-container__card{
+        display: unset;
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        bottom: 0;
+        margin: 0 auto;
+        background-color: $background-color-secundary;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 0 2rem;
+        .go-back{
+            position: absolute;
+            font-size: 30px;
+            margin: 0.7rem 0 0 -1.8rem;
+        }
+        .card-info{
+            height: 100%;
+            margin: 0 auto;
+            .card-info__name{
+                font-size: 19px;
+                margin: 0 auto
+            }
+            .card-rating__price-level{
+                margin-left: auto;
+            }
+            .card-contact{
+                @include flex-config(space-between, center);
+                .card-contact__web {
+                    @include flex-config(space-around, center);  
+                    &:hover{
+                    color: $background-color-details;
+                    }
+                .website{
+                    @include flex-config(flex-end, center);
+                        .web{
+                            width: 2rem;
+                            height: 2rem;
+                            margin-right: 0.5rem;
+                            color: $color-main;
+                            &:hover{
+                                color: $background-color-details;
+                            }
+                        }
+                    }
+                }
+            }
+            .card-extraInfo{
+                @include flex-config(space-between, center);  
+                &__phone, &__address {
+                    @include flex-config(null, center); 
+                    
+                }
+            }
+            .phone, .address{
+                margin-right: 0.4rem;
+                color: $color-main;
+            }
+            .booking, .confirm{
+                width: 7.3rem;
+                height: 2.5rem;
+                border-radius: 2rem;
+                top: 0;
+                margin: 0 auto;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+        .heart {
+                width: 1.5rem;
+                height: 1.5rem;
+                color: $background-color-details;
+                &:hover{
+                    color: rgba(94, 94, 94, 0.9);
+                }                
+            }
+            .heart--included{
+                width: 2rem;
+                height: 2rem;
+                color:$color-favs;
+                &:hover{
+                    color: rgba(94, 94, 94, 0.9);
+                } 
+            }

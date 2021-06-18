@@ -1,0 +1,65 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.form-container{
+    @include flex-config(space-around, center, column);
+    height: 44vh;
+    margin-top: 13%;
+    label{
+        width: 100%;
+        @include flex-config(center, center, column);
+        
+        input{
+            background-color: $background-color-secundary;
+            color:$background-color-items;
+            border: none;
+            border-radius: 5px;
+            padding:8px 8px 8px 43px;
+            width: 60%;
+            &:focus{
+                outline: none;
+                border: 1px solid $background-color-items;
+            }
+        }
+    }
+}
+
+.input-username{
+    background: url('https://api.iconify.design/carbon:user-filled.svg?color=%235E5E5E') no-repeat 5px center / contain;
+    background-size: 25px;
+}
+
+.input-email{
+    background: url('https://api.iconify.design/eva:email-fill.svg?color=%235E5E5E') no-repeat 5px center / contain;
+    background-size: 25px;
+}
+
+.input-password{
+    background: url('https://api.iconify.design/teenyicons:password-solid.svg?color=%235E5E5E') no-repeat 9px center / contain ;
+    background-size: 23px;
+}
+
+
+.modal-container{
+    @include flex-config(center, center, column);
+    background-color: $background-color-secundary;
+    margin: 0 auto;
+    width: 70%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.container-confirm__link{
+    background-color: transparent;
+    border: none;
+      &:hover{
+            text-decoration: underline;
+        }  
+}
+
+.register{
+    font-family: "Nunito", sans-serif;
+         &:hover{
+            background-color: rgba(124, 16, 224, 0.5);
+        }
+}

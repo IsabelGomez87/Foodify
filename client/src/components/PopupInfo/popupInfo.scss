@@ -1,0 +1,18 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.container-confirm{
+    @include flex-config(space-evenly, center, column);
+    height: 78%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    &__link{
+        font-size: 14px;
+        color: $color-secundary;
+          &:hover{
+            text-decoration: underline;
+        }  
+    }
+}

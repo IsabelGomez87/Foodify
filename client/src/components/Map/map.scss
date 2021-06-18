@@ -1,0 +1,24 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/color.scss';
+
+.restaurant-marker{
+    background: none;
+    border: none;
+}
+
+.infoWindow-container{
+    &__image{
+        display: flex;
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 150px;
+        height: 70px;
+        padding-bottom: 5px;
+        object-fit: cover;
+    }
+    &__name{
+       font-weight: bolder;
+       text-transform: uppercase;
+    }
+}
+

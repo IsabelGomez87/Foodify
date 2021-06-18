@@ -1,0 +1,57 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.edit-booking {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 50%; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+.edit-booking--visible{
+    display: block;
+}
+.modal-booking {
+    @include flex-config(center, center);
+    background-color:$background-color-secundary;
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: 90%;
+    height: 50%; 
+    &__info{
+        @include flex-config(center, center);
+        height: 100%;
+        width: 100%;
+    }
+    .card-info__name{
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .card-info__question{
+        color: $color-secundary;
+    }
+    .container-button{
+        &__confirm, &__cancel{
+        background-color: $background-color-secundary;
+        border-radius: 10%;
+        border: none;
+            .confirm, .cancel{
+                color: #9B52E0;
+                &:hover{
+                    color: rgba(124, 16, 224, 0.5);
+                }
+            }
+            .confirm{
+                font-size: 40px;
+            }
+            .cancel{
+                font-size: 50px; 
+            }
+        }
+    }
+}

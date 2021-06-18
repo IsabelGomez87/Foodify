@@ -1,0 +1,36 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.home-container{
+    min-height: calc(100vh - 8rem);
+    .list-title{    
+        color: $color-secundary;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+}
+
+.label-search {
+    width: 100%;
+    @include flex-config(center, center, column);
+    padding-bottom: 10px;
+        &__input{
+            background: url('https://api.iconify.design/whh:restaurantmenu.svg?color=%235E5E5E') no-repeat 5px center / contain;
+            background-size: 20px;
+            background-color: $background-color-secundary;
+            color:$background-color-items;
+            border: none;
+            border-radius: 5px;
+            padding:8px 8px 8px 43px;
+            width: 60%;
+            &:focus{
+                outline: none;
+                border: 1px solid $background-color-items;
+            }
+        }
+    }

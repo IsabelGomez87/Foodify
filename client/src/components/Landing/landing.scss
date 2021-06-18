@@ -1,0 +1,34 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.landing-container{
+ min-height: calc(100vh - 8rem);
+}
+.bookings-list-title {
+    color: #5E5E5E;
+    text-align: center;
+}
+
+.container-buttons{
+    @include flex-config(space-evenly, center, column);
+    height: 25vh;
+    margin-top: 10%;
+    .register{
+         &:hover{
+            background-color: rgba(124, 16, 224, 0.5);
+        }
+    }
+}
+
+.register{
+    text-transform: uppercase;
+    width: 7.3rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    top: 0;
+    margin: 0 auto;
+    border: none;
+    background-color: $background-color-buttons;
+    color: $color-letters
+}
+    

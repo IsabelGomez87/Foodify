@@ -1,0 +1,48 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.container-title{
+    @include flex-config(space-around, center);
+    font-weight: 700;
+     font-size: 18px;
+    .go-back{
+        font-size: 30px;
+        color: $color-secundary;
+        margin-bottom: 10px;
+    }
+    &--hidden{
+        background-color: rgba(0,0,0,0.4);
+    }
+    .list-title{
+        color: $color-secundary;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 42px 20px 0;
+        margin: 0 auto;
+    }
+   
+}
+.changeBooking{
+    color: $background-color-buttons;
+    font-size: 40px;
+    align-self: flex-end;
+    position: absolute;
+    top: 7.5rem;
+    right: 0.5rem;
+    &:hover{
+            color: rgba(124, 16, 224, 0.5);
+        }
+}
+
+.disabled{
+    position: absolute;
+    top: 7.5rem;
+    right: 0.5rem;
+    color: $background-color-items;
+    font-size: 40px;
+    cursor: auto;
+}
+.error-message {
+    color: $color-secundary;
+    padding-top:20px;
+}

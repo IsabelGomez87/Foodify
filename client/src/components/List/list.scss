@@ -1,0 +1,108 @@
+@import '../../styles/color.scss';
+@import '../../styles/mixin.scss';
+
+.restaurant-container{
+    @include flex-config(flex-start, center, column);
+    font-size: 15px;
+    min-height: calc(100vh - 8rem);
+    &__card {
+        width: 95%;
+        height: 180px; 
+        @include flex-config(null, null, row); 
+        background-color: $background-color-secundary;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem;
+        border-radius: 1rem; 
+        &--hidden{
+            background-color: rgba(0,0,0,0.4);
+        }
+        .card-img{
+            max-width: 50%;
+            .img {
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem; 
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+        .card-info{
+            @include flex-config(space-evenly, unset, column);
+            margin-left: 0.5rem;
+            min-width: 55%;
+            position: relative;
+            &__name{
+                font-weight: bolder;
+                cursor: pointer;
+                text-transform: uppercase;
+                text-align:center;
+            }
+            &__price-level{
+                text-align:center;
+            }
+            &__address{
+                font-weight: 300;
+            }
+             &__pax, &__date, &__time {
+                margin-left: 1rem;
+            }
+            .card-rating{
+                @include flex-config(center, null, row); 
+                &__rate{
+                    @include flex-config(center, null, row); 
+                    .star {
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        margin-right: 0.5rem;
+                    }
+                }
+                &__reviews{
+                    padding-left: 0.5rem;
+                    color: $background-color-items
+                }
+            }
+            .buttons-container{
+                @include flex-config(center, unset);
+            }
+            .fav {
+                @include flex-config(space-evenly, center); 
+                margin-right: 0.7rem;
+            }
+        }
+    }
+}
+
+
+p {
+    text-align: center;
+}
+
+
+/* pantalla TABLETS*/
+@media (min-width: 481px) {
+    .restaurant-container{
+        @include flex-config(null, null, row);
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 0 auto;
+        &__card {
+            width: 49%;
+            margin-right: 5px;
+        }
+    }
+    
+}
+
+
+/* pantalla Portatiles no retina */
+@media (min-width: 1026px)  {
+    .restaurant-container{
+        @include flex-config(center, null, row);
+        max-width: 95%;
+        margin: 0 auto;
+        &__card {
+            width: 30%;
+            margin: 1rem;
+        }
+    }
+}

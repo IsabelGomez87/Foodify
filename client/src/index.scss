@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap');
+@import './styles/color.scss';
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    color: $color-main;
+    body {
+        overflow: auto;
+        height: 100%;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+    button {
+        cursor: pointer;
+
+    }
+}
